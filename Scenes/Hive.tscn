@@ -89,5 +89,63 @@ anims/Event1 = SubResource( 3 )
 anims/Event2 = SubResource( 4 )
 anims/RESET = SubResource( 5 )
 
+[node name="Hive_menu" type="CanvasLayer" parent="."]
+pause_mode = 2
+
+[node name="Elements" type="Node2D" parent="Hive_menu"]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="Hive_menu/Elements"]
+margin_left = 150.0
+margin_top = 75.0
+margin_right = 874.0
+margin_bottom = 525.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="Hive_menu/Elements"]
+margin_left = 445.0
+margin_top = 134.0
+margin_right = 852.0
+margin_bottom = 495.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Hive_menu/Elements"]
+margin_left = 202.0
+margin_top = 432.0
+margin_right = 400.0
+margin_bottom = 501.0
+text = "Return"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="Hive_menu/Elements"]
+margin_left = 160.0
+margin_top = 333.0
+margin_right = 358.0
+margin_bottom = 402.0
+text = "Rest"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Hive_menu/Elements"]
+margin_left = 474.0
+margin_top = 85.0
+margin_right = 587.0
+margin_bottom = 99.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Nome da colmeia"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="body_entered" from="Range" to="." method="_on_Range_body_entered"]
 [connection signal="body_exited" from="Range" to="." method="_on_Range_body_exited"]
+[connection signal="pressed" from="Hive_menu/Elements/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Hive_menu/Elements/Button2" to="." method="_on_Button2_pressed"]

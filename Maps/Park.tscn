@@ -9,10 +9,28 @@
 script = ExtResource( 3 )
 
 [node name="Hive" parent="." instance=ExtResource( 1 )]
-position = Vector2( 237.875, 271.53 )
+position = Vector2( 127, 445 )
 
 [node name="Bee" parent="." instance=ExtResource( 2 )]
-position = Vector2( 896.585, 156.914 )
+position = Vector2( 950, 295 )
+
+[node name="Camera2D" type="Camera2D" parent="Bee"]
+current = true
 
 [node name="Flower" parent="." instance=ExtResource( 4 )]
-position = Vector2( 476, 242 )
+position = Vector2( 424, 48 )
+
+[node name="Flower2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 129, 91 )
+
+[node name="Flower3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 321, 272 )
+
+[node name="Flower4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 758, 46 )
+
+[node name="Flower5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 617, 230 )
+
+[node name="Flower6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 949, 72 )
