@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Trash_can.png-f8f4ad749231c6b852340d6d2388a7ca.stex"
+path="res://.import/Sprite_sheet.png-1b6510ac53d5d30e82850b5203476bff.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/park_graphics/Trash_can.png"
-dest_files=[ "res://.import/Trash_can.png-f8f4ad749231c6b852340d6d2388a7ca.stex" ]
+source_file="res://Sprites/park_graphics/Sprite_sheet.png"
+dest_files=[ "res://.import/Sprite_sheet.png-1b6510ac53d5d30e82850b5203476bff.stex" ]
 
 [params]
 

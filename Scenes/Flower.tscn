@@ -1,12 +1,78 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scripts/Flower.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/park_graphics/Sprite_sheet.png" type="Texture" id=2]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 19.75, 20 )
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 8, 8, 8 )
 
-[sub_resource type="CircleShape2D" id=2]
-radius = 47.0106
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 2 )
+region = Rect2( 16, 8, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 2 )
+region = Rect2( 16, 0, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 2 )
+region = Rect2( 48, 8, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 2 )
+region = Rect2( 64, 8, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 2 )
+region = Rect2( 48, 0, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 2 )
+region = Rect2( 64, 0, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 2 )
+region = Rect2( 24, 0, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 2 )
+region = Rect2( 40, 0, 8, 8 )
+
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ SubResource( 10 ), SubResource( 11 ) ],
+"loop": true,
+"name": "3",
+"speed": 1.8
+}, {
+"frames": [ SubResource( 12 ), SubResource( 13 ) ],
+"loop": true,
+"name": "0",
+"speed": 1.8
+}, {
+"frames": [ SubResource( 14 ), SubResource( 15 ) ],
+"loop": true,
+"name": "4",
+"speed": 1.8
+}, {
+"frames": [ SubResource( 18 ), SubResource( 19 ) ],
+"loop": true,
+"name": "2",
+"speed": 1.8
+}, {
+"frames": [ SubResource( 20 ), SubResource( 21 ) ],
+"loop": true,
+"name": "1",
+"speed": 1.8
+} ]
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 4, 4 )
 
 [sub_resource type="Animation" id=3]
 resource_name = "Event1"
@@ -58,28 +124,29 @@ tracks/0/keys = {
 [node name="Flower" type="StaticBody2D"]
 script = ExtResource( 1 )
 
-[node name="color" type="ColorRect" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="shaking" type="AnimatedSprite" parent="."]
+frames = SubResource( 8 )
+animation = "4"
+playing = true
 
-[node name="Shape" type="CollisionShape2D" parent="."]
-position = Vector2( 20.25, 20 )
-shape = SubResource( 1 )
+[node name="stop" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 2 )
+hframes = 10
+vframes = 20
+frame = 11
 
 [node name="area" type="Area2D" parent="."]
 
 [node name="shape" type="CollisionShape2D" parent="area"]
-position = Vector2( 20, 20 )
-shape = SubResource( 2 )
+shape = SubResource( 9 )
 
 [node name="PressE" type="Label" parent="."]
 modulate = Color( 1, 1, 1, 0 )
+margin_left = -4.0
 margin_top = -16.0
-margin_right = 40.0
-margin_bottom = 4.0
+margin_right = 3.0
+margin_bottom = -2.0
 text = "E"
 align = 1
 valign = 1
