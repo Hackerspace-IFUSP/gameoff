@@ -1,7 +1,11 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Scripts/Flower.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/park_graphics/Sprite_sheet.png" type="Texture" id=2]
+
+[sub_resource type="Gradient" id=22]
+offsets = PoolRealArray( 0.145729, 0.994975 )
+colors = PoolColorArray( 1, 1, 1, 1, 1, 0.960784, 0, 0.109804 )
 
 [sub_resource type="AtlasTexture" id=10]
 atlas = ExtResource( 2 )
@@ -27,14 +31,6 @@ region = Rect2( 48, 8, 8, 8 )
 atlas = ExtResource( 2 )
 region = Rect2( 64, 8, 8, 8 )
 
-[sub_resource type="AtlasTexture" id=18]
-atlas = ExtResource( 2 )
-region = Rect2( 48, 0, 8, 8 )
-
-[sub_resource type="AtlasTexture" id=19]
-atlas = ExtResource( 2 )
-region = Rect2( 64, 0, 8, 8 )
-
 [sub_resource type="AtlasTexture" id=20]
 atlas = ExtResource( 2 )
 region = Rect2( 24, 0, 8, 8 )
@@ -42,6 +38,14 @@ region = Rect2( 24, 0, 8, 8 )
 [sub_resource type="AtlasTexture" id=21]
 atlas = ExtResource( 2 )
 region = Rect2( 40, 0, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 2 )
+region = Rect2( 48, 0, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 2 )
+region = Rect2( 64, 0, 8, 8 )
 
 [sub_resource type="SpriteFrames" id=8]
 animations = [ {
@@ -60,14 +64,14 @@ animations = [ {
 "name": "4",
 "speed": 1.8
 }, {
-"frames": [ SubResource( 18 ), SubResource( 19 ) ],
-"loop": true,
-"name": "2",
-"speed": 1.8
-}, {
 "frames": [ SubResource( 20 ), SubResource( 21 ) ],
 "loop": true,
 "name": "1",
+"speed": 1.8
+}, {
+"frames": [ SubResource( 18 ), SubResource( 19 ) ],
+"loop": true,
+"name": "2",
 "speed": 1.8
 } ]
 
@@ -123,6 +127,20 @@ tracks/0/keys = {
 
 [node name="Flower" type="StaticBody2D"]
 script = ExtResource( 1 )
+
+[node name="particles" type="CPUParticles2D" parent="."]
+position = Vector2( 0, 1 )
+amount = 20
+lifetime = 0.6
+speed_scale = 0.5
+randomness = 0.5
+lifetime_randomness = 0.31
+emission_shape = 1
+emission_sphere_radius = 3.17
+direction = Vector2( 0, 0 )
+gravity = Vector2( 0, -98 )
+initial_velocity_random = 0.63
+color_ramp = SubResource( 22 )
 
 [node name="shaking" type="AnimatedSprite" parent="."]
 frames = SubResource( 8 )

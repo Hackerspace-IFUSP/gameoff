@@ -26,6 +26,7 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_pressed("Action") and event == event_on:
 		$shaking.hide()
+		$particles.emitting = false
 		$stop.show()
 
 func _on_area_body_entered(body):

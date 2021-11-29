@@ -10,7 +10,7 @@ onready var objects_position = top_position
 var position_index = 0
 
 func _ready():
-	pass
+	$Bee.global_position = GAME.player_position
 	
 	
 func _process(delta):

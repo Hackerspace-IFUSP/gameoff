@@ -11,12 +11,12 @@ func _ready():
 
 func _process(delta):
 	translate(speed*delta)
-	if (Input.is_action_just_pressed("ui_left") and key == left_key) or (Input.is_action_just_pressed("ui_right") and key == right_key) or (Input.is_action_just_pressed("ui_up") and key == up_key) or (Input.is_action_just_pressed("ui_down") and key == down_key):
-		if status == on_key:
-			queue_free()
+#	if (Input.is_action_just_pressed("ui_left") and key == left_key) or (Input.is_action_just_pressed("ui_right") and key == right_key) or (Input.is_action_just_pressed("ui_up") and key == up_key) or (Input.is_action_just_pressed("ui_down") and key == down_key):
+#		if status == on_key:
+#			queue_free()
 
 
 func _on_Note_area_entered(area):
 	if area.is_in_group("key"):
-		print("entrou")
 		status = on_key
+
