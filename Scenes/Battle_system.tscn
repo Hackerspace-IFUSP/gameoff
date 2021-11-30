@@ -1,9 +1,16 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Scripts/Battle_system.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Arrow-Sheet.png" type="Texture" id=2]
-[ext_resource path="res://Musics/NeneBeat.wav" type="AudioStream" id=3]
-[ext_resource path="res://Musics/Nene_and_pika_beat2.wav" type="AudioStream" id=4]
+[ext_resource path="res://Sprites/Dancers/kpopbee.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Dancers/bee.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Dancers/funckbee.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Dancers/puncbee.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Dancers/otakubee.png" type="Texture" id=9]
+[ext_resource path="res://Musics/B-Rock.ogg" type="AudioStream" id=10]
+[ext_resource path="res://Musics/Pika_plus_Nene_Beat.ogg" type="AudioStream" id=11]
+[ext_resource path="res://Musics/Bee-Punk_Anthem.ogg" type="AudioStream" id=12]
+[ext_resource path="res://Musics/Bee_Funky.ogg" type="AudioStream" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8, 16 )
@@ -70,6 +77,78 @@ tracks/4/keys = {
 "update": 0,
 "values": [ Vector2( 1, 1 ) ]
 }
+tracks/5/type = "value"
+tracks/5/path = NodePath("Dancers/Kpopbee:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 2 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Dancers/Bee:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 2 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Dancers/Funkbee:frame")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 2 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Dancers/Punkbee:frame_coords")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 2, 0 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Dancers/Punkbee:frame")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 2 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Dancers/Otakubee:frame")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 2 ]
+}
 
 [sub_resource type="Animation" id=3]
 resource_name = "beat"
@@ -124,11 +203,71 @@ tracks/3/keys = {
 "update": 0,
 "values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1.1, 1.1 ) ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("Dancers/Kpopbee:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 2, 3 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Dancers/Bee:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 2, 3 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Dancers/Funkbee:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 2, 3 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Dancers/Punkbee:frame")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 2, 3 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Dancers/Otakubee:frame")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.45 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 2, 3 ]
+}
 
 [sub_resource type="Animation" id=4]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("Music:stream")
+tracks/0/path = NodePath("music:reset_on_save")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -137,10 +276,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ ExtResource( 3 ) ]
+"values": [ false ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Music:playing")
+tracks/1/path = NodePath("Musics/Music1:playing")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -152,7 +291,7 @@ tracks/1/keys = {
 "values": [ true ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("music:reset_on_save")
+tracks/2/path = NodePath("Musics/Music2:playing")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -161,34 +300,52 @@ tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ false ]
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Musics/Music3:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Musics/Music4:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
 }
 
 [sub_resource type="Animation" id=5]
 resource_name = "event"
-length = 80.0
-tracks/0/type = "value"
-tracks/0/path = NodePath("Music:playing")
+length = 88.0
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 74.1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 1,
-"values": [ false, true, false ]
-}
-tracks/1/type = "method"
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.2, 2, 2.2, 4, 4.2, 6, 6.2, 8, 8.2, 10, 10.2, 12, 12.2, 14, 14.2, 16, 16.2, 18, 18.2, 20, 20.2, 22, 22.2, 24, 24.2, 26, 26.2, 28, 28.2, 30, 30.2, 32, 32.2, 34, 34.2, 36, 36.2, 38, 38.2, 40, 40.2, 42, 42.2, 44, 44.2, 46, 46.2, 48, 48.2, 50, 50.2, 52, 52.2, 54, 54.2, 56, 56.2, 58, 58.2, 60, 60.2, 62, 62.2, 64, 64.2, 66, 66.2, 68, 68.2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 7.2, 7.4, 9.2, 9.4, 11.2, 11.4, 13.2, 13.4, 15.2, 15.4, 17.2, 17.4, 19.2, 19.4, 21.2, 21.4, 23.2, 23.4, 25.2, 25.4, 27.2, 27.4, 29.2, 29.4, 31.2, 31.4, 33.2, 33.4, 35.2, 35.4, 37.2, 37.4, 39.2, 39.4, 41.2, 41.4, 43.2, 43.4, 45.2, 45.4, 47.2, 47.4, 49.2, 49.4, 51.2, 51.4, 53.2, 53.4, 55.2, 55.4, 57.2, 57.4, 59.2, 59.4, 61.2, 61.4, 63.2, 63.4, 65.2, 65.4, 67.2, 67.4, 69.2, 69.4, 71.2, 71.4, 73.2, 73.4, 75.2, 75.4, 77.2, 77.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "values": [ {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
 "args": [  ],
 "method": "note_1"
 }, {
@@ -400,6 +557,53 @@ tracks/1/keys = {
 "method": "note_1"
 } ]
 }
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 16.4, 20.4, 24.4, 28.4, 32.4, 36.4, 48.4, 52.4, 56.4, 60.4, 64.4, 68.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+} ]
+}
 tracks/2/type = "method"
 tracks/2/path = NodePath(".")
 tracks/2/interp = 1
@@ -407,8 +611,383 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 1, 1.2, 3, 3.2, 5, 5.2, 7, 7.2, 9, 9.2, 11, 11.2, 13, 13.2, 15, 15.2, 17, 17.2, 19, 19.2, 21, 21.2, 23, 23.2, 25, 25.2, 27, 27.2, 29, 29.2, 31, 31.2, 33, 33.2, 35, 35.2, 37, 37.2, 39, 39.2, 41, 41.2, 43, 43.2, 45, 45.2, 47, 47.2, 49, 49.2, 51, 51.2, 53, 53.2, 55, 55.2, 57, 57.2, 59, 59.2, 61, 61.2, 63, 63.2, 65, 65.2, 67, 67.2, 69, 69.2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 18.5, 22.5, 26.5, 30.5, 34.5, 38.5, 50.5, 54.5, 58.5, 62.5, 66.5, 70.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+} ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 16, 16.2, 18, 18.2, 20, 20.2, 22, 22.2, 24, 24.2, 26, 26.2, 28, 28.2, 30, 30.2, 32, 32.2, 34, 34.2, 36, 36.2, 38, 38.2, 48, 48.2, 50, 50.2, 52, 52.2, 54, 54.2, 56, 56.2, 58, 58.2, 60, 60.2, 62, 62.2, 64, 64.2, 66, 66.2, 68, 68.2, 70, 70.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+} ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Musics/Music1:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "method"
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 87.9 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "change_scene"
+} ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "event2"
+length = 88.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Musics/Music2:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 15.2, 15.4, 17.2, 17.4, 19.2, 19.4, 21.2, 21.4, 31.2, 31.4, 33.2, 33.4, 35.2, 35.4, 37.2, 37.4, 47.1, 47.3, 49.1, 49.3, 51.1, 51.3, 53.1, 53.3, 55.3, 55.5, 57.3, 57.5, 59.3, 59.5, 61.3, 61.5, 71.2, 71.4, 73.2, 73.4, 75.2, 75.4, 77.2, 77.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 16.2, 16.4, 20.2, 20.4, 32.2, 32.4, 36.2, 36.4, 48.1, 48.3, 52.1, 52.3, 56.3, 56.5, 60.3, 60.5, 72.2, 72.4, 76.2, 76.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "values": [ {
 "args": [  ],
 "method": "note_2"
@@ -452,6 +1031,761 @@ tracks/2/keys = {
 "args": [  ],
 "method": "note_2"
 }, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+} ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 18.2, 18.4, 22.2, 22.4, 34.2, 34.4, 38.2, 38.4, 50.1, 50.3, 54.1, 54.3, 58.3, 58.5, 62.3, 62.5, 74.2, 74.4, 78.2, 78.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+} ]
+}
+tracks/4/type = "method"
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 7.2, 7.4, 9.2, 9.4, 11.2, 11.4, 13.2, 13.4, 23.2, 23.4, 25.2, 25.4, 27.2, 27.4, 29.2, 29.4, 39.2, 39.4, 41.2, 41.4, 43.2, 43.4, 45.2, 45.4, 63.2, 63.4, 65.2, 65.4, 67.2, 67.4, 69.2, 69.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+} ]
+}
+tracks/5/type = "method"
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 88 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "change_scene"
+} ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "event3"
+length = 88.0
+step = 0.4
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 8, 10, 12.4, 14.4, 15.6, 17.6, 19.6, 21.6, 24, 26, 28.4, 30.4, 31.6, 33.6, 35.6, 37.6, 40, 42, 44.4, 46.4, 47.6, 49.6, 51.6, 53.6, 55.6, 57.6, 59.6, 61.6, 63.6, 65.6, 67.6, 69.6, 72, 74, 76.4, 78.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+} ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 15.2, 16, 18, 20, 22, 31.2, 32, 34, 36, 38, 47.2, 48, 50, 52, 54, 55.2, 56, 58, 60, 62, 63.2, 64, 66, 68, 70 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+}, {
+"args": [  ],
+"method": "note_2"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 7.2, 9.2, 11.2, 13.2, 16.4, 18.4, 20.4, 22.4, 23.2, 25.2, 27.2, 29.2, 32.4, 34.4, 36.4, 38.4, 39.2, 41.2, 43.2, 45.2, 48.4, 50.4, 52.4, 54.4, 56.4, 58.4, 60.4, 62.4, 64.4, 66.4, 68.4, 70.4, 71.2, 73.2, 75.2, 77.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+} ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 8.4, 10.4, 12, 14, 16.8, 18.8, 20.8, 24.4, 26.4, 28, 30, 32.8, 34.8, 36.8, 40.4, 42.4, 44, 46, 48.8, 50.8, 52.8, 56.8, 58.8, 60.8, 64.8, 66.8, 68.8, 72.4, 74.4, 76, 78 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+}, {
+"args": [  ],
+"method": "note_4"
+} ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Musics/Music3:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "method"
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 88 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "change_scene"
+} ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "event4"
+length = 88.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Musics/Music4:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 17.7, 18.2, 18.7, 21.7, 33.7, 34.2, 34.7, 37.7, 49.7, 50.2, 50.7, 53.7, 57.7, 58.2, 58.7, 61.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+}, {
+"args": [  ],
+"method": "note_1"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 7.2, 7.7, 9.2, 9.7, 11.2, 11.7, 13.2, 13.7, 17.2, 19.2, 21.2, 22.2, 23.2, 23.7, 25.2, 25.7, 27.2, 27.7, 29.2, 29.7, 33.2, 35.2, 37.2, 38.2, 39.2, 39.7, 41.2, 41.7, 43.2, 43.7, 45.2, 45.7, 49.2, 51.2, 53.2, 54.2, 57.2, 59.2, 61.2, 62.2, 63.2, 63.7, 65.2, 65.7, 67.2, 67.7, 69.2, 69.7, 71.2, 71.7, 73.2, 73.7, 75.2, 75.7, 77.2, 77.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"values": [ {
 "args": [  ],
 "method": "note_2"
 }, {
@@ -628,9 +1962,87 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 1.4, 5.5, 9.4, 13.5, 17.4, 21.5, 25.4, 29.5, 33.4, 37.5, 41.4, 45.5, 49.4, 53.5, 57.4, 61.5, 65.4, 69.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 8.2, 8.7, 12.2, 12.7, 15.2, 15.7, 16.7, 19.7, 20.7, 22.7, 24.2, 24.7, 28.2, 28.7, 31.2, 31.7, 32.7, 35.7, 36.7, 38.7, 40.2, 40.7, 44.2, 44.7, 47.2, 47.7, 48.7, 51.7, 52.7, 54.7, 55.2, 55.7, 56.7, 59.7, 60.7, 62.7, 64.2, 64.7, 68.2, 68.7, 72.2, 72.7, 76.2, 76.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "values": [ {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
+"args": [  ],
+"method": "note_3"
+}, {
 "args": [  ],
 "method": "note_3"
 }, {
@@ -693,8 +2105,8 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 3.4, 7.4, 11.4, 15.4, 19.4, 23.4, 27.4, 31.4, 35.4, 39.4, 43.4, 47.4, 51.4, 55.4, 59.4, 63.4, 67.4 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 16.2, 20.2, 32.2, 36.2, 48.2, 52.2, 56.2, 60.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "values": [ {
 "args": [  ],
 "method": "note_4"
@@ -719,33 +2131,20 @@ tracks/4/keys = {
 }, {
 "args": [  ],
 "method": "note_4"
-}, {
+} ]
+}
+tracks/5/type = "method"
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 88 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
 "args": [  ],
-"method": "note_4"
-}, {
-"args": [  ],
-"method": "note_4"
-}, {
-"args": [  ],
-"method": "note_4"
-}, {
-"args": [  ],
-"method": "note_4"
-}, {
-"args": [  ],
-"method": "note_4"
-}, {
-"args": [  ],
-"method": "note_4"
-}, {
-"args": [  ],
-"method": "note_4"
-}, {
-"args": [  ],
-"method": "note_4"
-}, {
-"args": [  ],
-"method": "note_4"
+"method": "change_scene"
 } ]
 }
 
@@ -810,27 +2209,108 @@ anims/beat = SubResource( 3 )
 reset_on_save = false
 anims/RESET = SubResource( 4 )
 anims/event = SubResource( 5 )
-
-[node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 4 )
+anims/event2 = SubResource( 6 )
+anims/event3 = SubResource( 7 )
+anims/event4 = SubResource( 8 )
 
 [node name="active_keys_timer" type="Node" parent="."]
 
 [node name="timer_l" type="Timer" parent="active_keys_timer"]
-wait_time = 0.05
+wait_time = 0.1
 one_shot = true
 
 [node name="timer_d" type="Timer" parent="active_keys_timer"]
-wait_time = 0.05
+wait_time = 0.1
 one_shot = true
 
 [node name="timer_u" type="Timer" parent="active_keys_timer"]
-wait_time = 0.05
+wait_time = 0.1
 one_shot = true
 
 [node name="timer_r" type="Timer" parent="active_keys_timer"]
-wait_time = 0.05
+wait_time = 0.1
 one_shot = true
+
+[node name="Dancers" type="Node2D" parent="."]
+
+[node name="Punkbee" type="Sprite" parent="Dancers"]
+position = Vector2( 192, 96 )
+texture = ExtResource( 8 )
+hframes = 6
+frame = 2
+
+[node name="Punkbee2" type="Sprite" parent="Dancers"]
+visible = false
+position = Vector2( 192, 96 )
+texture = ExtResource( 8 )
+hframes = 6
+frame = 2
+
+[node name="Otakubee" type="Sprite" parent="Dancers"]
+position = Vector2( 64, 96 )
+texture = ExtResource( 9 )
+hframes = 6
+frame = 2
+
+[node name="Otakubee2" type="Sprite" parent="Dancers"]
+visible = false
+position = Vector2( 64, 96 )
+texture = ExtResource( 9 )
+hframes = 6
+frame = 2
+
+[node name="Funkbee" type="Sprite" parent="Dancers"]
+position = Vector2( 160, 112 )
+texture = ExtResource( 7 )
+hframes = 6
+frame = 2
+
+[node name="Funkbee2" type="Sprite" parent="Dancers"]
+visible = false
+position = Vector2( 160, 112 )
+texture = ExtResource( 7 )
+hframes = 6
+frame = 2
+
+[node name="Bee" type="Sprite" parent="Dancers"]
+position = Vector2( 96, 112 )
+texture = ExtResource( 6 )
+hframes = 6
+frame = 2
+
+[node name="Bee2" type="Sprite" parent="Dancers"]
+visible = false
+position = Vector2( 96, 112 )
+texture = ExtResource( 6 )
+hframes = 6
+frame = 2
+
+[node name="Kpopbee" type="Sprite" parent="Dancers"]
+position = Vector2( 128, 128 )
+texture = ExtResource( 5 )
+hframes = 6
+frame = 2
+
+[node name="Kpopbee2" type="Sprite" parent="Dancers"]
+visible = false
+position = Vector2( 128, 128 )
+texture = ExtResource( 5 )
+hframes = 6
+frame = 2
+
+[node name="Musics" type="Node" parent="."]
+
+[node name="Music1" type="AudioStreamPlayer" parent="Musics"]
+stream = ExtResource( 11 )
+
+[node name="Music2" type="AudioStreamPlayer" parent="Musics"]
+stream = ExtResource( 13 )
+
+[node name="Music3" type="AudioStreamPlayer" parent="Musics"]
+stream = ExtResource( 10 )
+
+[node name="Music4" type="AudioStreamPlayer" parent="Musics"]
+stream = ExtResource( 12 )
 
 [connection signal="area_shape_entered" from="Key" to="." method="_on_Key_area_shape_entered"]
 [connection signal="area_shape_entered" from="Key2" to="." method="_on_Key_area_shape_entered"]

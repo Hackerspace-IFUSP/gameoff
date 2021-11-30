@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Pika_plus_Nene_Beat.ogg-68768367ab633827e4b8d571b027f462.oggstr"
+
+[deps]
+
+source_file="res://Musics/Pika_plus_Nene_Beat.ogg"
+dest_files=[ "res://.import/Pika_plus_Nene_Beat.ogg-68768367ab633827e4b8d571b027f462.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

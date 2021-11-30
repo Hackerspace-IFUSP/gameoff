@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/B-Rock.ogg-279288cf6a3ff64256491a5234f2fa52.oggstr"
+
+[deps]
+
+source_file="res://Musics/B-Rock.ogg"
+dest_files=[ "res://.import/B-Rock.ogg-279288cf6a3ff64256491a5234f2fa52.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
