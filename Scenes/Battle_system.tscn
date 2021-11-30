@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Scripts/Battle_system.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Arrow-Sheet.png" type="Texture" id=2]
@@ -2148,7 +2148,11 @@ tracks/5/keys = {
 } ]
 }
 
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 133, 10 )
+
 [node name="Battle_system" type="Node2D"]
+pause_mode = 2
 position = Vector2( 0, 64 )
 script = ExtResource( 1 )
 
@@ -2234,6 +2238,7 @@ one_shot = true
 [node name="Dancers" type="Node2D" parent="."]
 
 [node name="Punkbee" type="Sprite" parent="Dancers"]
+visible = false
 position = Vector2( 192, 96 )
 texture = ExtResource( 8 )
 hframes = 6
@@ -2247,6 +2252,7 @@ hframes = 6
 frame = 2
 
 [node name="Otakubee" type="Sprite" parent="Dancers"]
+visible = false
 position = Vector2( 64, 96 )
 texture = ExtResource( 9 )
 hframes = 6
@@ -2260,6 +2266,7 @@ hframes = 6
 frame = 2
 
 [node name="Funkbee" type="Sprite" parent="Dancers"]
+visible = false
 position = Vector2( 160, 112 )
 texture = ExtResource( 7 )
 hframes = 6
@@ -2273,6 +2280,7 @@ hframes = 6
 frame = 2
 
 [node name="Bee" type="Sprite" parent="Dancers"]
+visible = false
 position = Vector2( 96, 112 )
 texture = ExtResource( 6 )
 hframes = 6
@@ -2312,6 +2320,26 @@ stream = ExtResource( 10 )
 [node name="Music4" type="AudioStreamPlayer" parent="Musics"]
 stream = ExtResource( 12 )
 
+[node name="key_status" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="Points" type="Label" parent="."]
+margin_left = 192.0
+margin_top = -48.0
+margin_right = 256.0
+margin_bottom = -34.0
+text = "Points: 00"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Killzone" type="Area2D" parent="."]
+
+[node name="shape" type="CollisionShape2D" parent="Killzone"]
+position = Vector2( 128, -104 )
+shape = SubResource( 9 )
+
 [connection signal="area_shape_entered" from="Key" to="." method="_on_Key_area_shape_entered"]
 [connection signal="area_shape_entered" from="Key2" to="." method="_on_Key_area_shape_entered"]
 [connection signal="area_shape_entered" from="Key3" to="." method="_on_Key_area_shape_entered"]
@@ -2320,3 +2348,5 @@ stream = ExtResource( 12 )
 [connection signal="timeout" from="active_keys_timer/timer_d" to="." method="_on_timer_d_timeout"]
 [connection signal="timeout" from="active_keys_timer/timer_u" to="." method="_on_timer_u_timeout"]
 [connection signal="timeout" from="active_keys_timer/timer_r" to="." method="_on_timer_r_timeout"]
+[connection signal="timeout" from="key_status" to="." method="_on_Timer_timeout"]
+[connection signal="area_entered" from="Killzone" to="." method="_on_Killzone_area_entered"]

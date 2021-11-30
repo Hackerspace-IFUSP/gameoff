@@ -25,6 +25,7 @@ func _ready():
 
 func _process(delta):
 	if Input.is_action_just_pressed("Action") and event == event_on:
+		GAME.polen += int(rand_range(1,5))
 		$shaking.hide()
 		$particles.emitting = false
 		$stop.show()

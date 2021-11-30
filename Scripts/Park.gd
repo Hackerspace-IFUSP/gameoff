@@ -11,14 +11,16 @@ var position_index = 0
 
 func _ready():
 	$Bee.global_position = GAME.player_position
+	if (GAME.level1 + GAME.level2 + GAME.level3 + GAME.level4) == 4:
+		print("ganhou")
 	
 	
 func _process(delta):
 	shadows()
 	persons_position()
-	
-	
-
+	$"CanvasLayer/Hudbar/HoneyHud/Label".text = str(GAME.honey)
+	$"CanvasLayer/Hudbar/PolenHud/Label2".text = str(GAME.polen)
+	$"CanvasLayer/Hudbar/Bee/Label3".text = str(GAME.dancers)
 
 func shadows():
 	if shadows == max_shadows:

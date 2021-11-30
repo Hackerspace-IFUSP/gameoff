@@ -73,9 +73,9 @@ shape = SubResource( 2 )
 [node name="PressE" type="Label" parent="."]
 modulate = Color( 1, 1, 1, 0 )
 margin_left = -25.0
-margin_top = -50.0
+margin_top = -22.0
 margin_right = 25.0
-margin_bottom = -30.0
+margin_bottom = -2.0
 text = "E"
 align = 1
 valign = 1
@@ -91,60 +91,148 @@ anims/RESET = SubResource( 5 )
 [node name="Hive_menu" type="CanvasLayer" parent="."]
 pause_mode = 2
 
-[node name="Elements" type="Node2D" parent="Hive_menu"]
+[node name="Principal" type="Node2D" parent="Hive_menu"]
 visible = false
 
-[node name="ColorRect" type="ColorRect" parent="Hive_menu/Elements"]
-margin_left = 150.0
-margin_top = 75.0
-margin_right = 874.0
-margin_bottom = 525.0
+[node name="Background" type="ColorRect" parent="Hive_menu/Principal"]
+margin_right = 256.0
+margin_bottom = 256.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ColorRect2" type="ColorRect" parent="Hive_menu/Elements"]
-margin_left = 445.0
-margin_top = 134.0
-margin_right = 852.0
-margin_bottom = 495.0
+[node name="Image_screen" type="ColorRect" parent="Hive_menu/Principal"]
+margin_left = 72.0
+margin_top = 64.0
+margin_right = 248.0
+margin_bottom = 192.0
 color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="Hive_menu/Elements"]
-margin_left = 202.0
-margin_top = 432.0
-margin_right = 400.0
-margin_bottom = 501.0
-text = "Return"
+[node name="Name" type="Label" parent="Hive_menu/Principal"]
+margin_top = 8.0
+margin_right = 256.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Capital"
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button2" type="Button" parent="Hive_menu/Elements"]
-margin_left = 160.0
-margin_top = 333.0
-margin_right = 358.0
-margin_bottom = 402.0
+[node name="Rest" type="Button" parent="Hive_menu/Principal"]
+margin_left = 8.0
+margin_top = 112.0
+margin_right = 68.0
+margin_bottom = 142.0
 text = "Rest"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Hive_menu/Elements"]
-margin_left = 474.0
-margin_top = 85.0
-margin_right = 587.0
-margin_bottom = 99.0
+[node name="Return" type="Button" parent="Hive_menu/Principal"]
+margin_left = 160.0
+margin_top = 216.0
+margin_right = 220.0
+margin_bottom = 246.0
+text = "Return"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hive" type="Node2D" parent="Hive_menu"]
+visible = false
+
+[node name="Background" type="ColorRect" parent="Hive_menu/Hive"]
+margin_right = 256.0
+margin_bottom = 256.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Image_screen" type="ColorRect" parent="Hive_menu/Hive"]
+margin_left = 96.0
+margin_top = 64.0
+margin_right = 248.0
+margin_bottom = 192.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="Hive_menu/Hive"]
+margin_top = 8.0
+margin_right = 256.0
+margin_bottom = 32.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Nome da colmeia"
+text = "Hive1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Influence" type="Button" parent="Hive_menu/Hive"]
+margin_left = 8.0
+margin_top = 80.0
+margin_right = 80.0
+margin_bottom = 110.0
+text = "Influence"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Price" type="Label" parent="Hive_menu/Hive/Influence"]
+margin_top = -16.0
+margin_right = 72.0
+margin_bottom = -2.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "50x Honey"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Chalange" type="Button" parent="Hive_menu/Hive"]
+margin_left = 8.0
+margin_top = 160.0
+margin_right = 80.0
+margin_bottom = 190.0
+text = "Chalange"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Price" type="Label" parent="Hive_menu/Hive/Chalange"]
+margin_top = -16.0
+margin_right = 72.0
+margin_bottom = -2.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1x Dancer"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Return" type="Button" parent="Hive_menu/Hive"]
+margin_left = 160.0
+margin_top = 216.0
+margin_right = 220.0
+margin_bottom = 246.0
+text = "Return"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [connection signal="body_entered" from="Range" to="." method="_on_Range_body_entered"]
 [connection signal="body_exited" from="Range" to="." method="_on_Range_body_exited"]
-[connection signal="pressed" from="Hive_menu/Elements/Button" to="." method="_on_Button_pressed"]
-[connection signal="pressed" from="Hive_menu/Elements/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Hive_menu/Principal/Rest" to="." method="_on_Rest_pressed"]
+[connection signal="pressed" from="Hive_menu/Principal/Return" to="." method="_on_Return_pressed"]
+[connection signal="pressed" from="Hive_menu/Hive/Influence" to="." method="_on_Influence_pressed"]
+[connection signal="pressed" from="Hive_menu/Hive/Chalange" to="." method="_on_Chalange_pressed"]
+[connection signal="pressed" from="Hive_menu/Hive/Return" to="." method="_on_Return_pressed"]
