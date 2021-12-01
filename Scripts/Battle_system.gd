@@ -143,6 +143,7 @@ func _process(delta):
 
 
 func _ready():
+	$transition.play("event")
 	$beat.play("beat")
 	if music == 0:
 		$music.play("event")	
@@ -298,3 +299,7 @@ func _on_Killzone_area_entered(area):
 	if area.is_in_group("note"):
 		points -= 20
 		area.queue_free()
+
+
+func transition_end():
+	$transition.play("event2")

@@ -9,6 +9,18 @@ export(Texture) var bee_Face
 
 func _ready():
 	$Hive_menu/Hive/Image_screen.texture = bee_Face
+	if hive ==1: 
+		if GAME.level1 != 0:
+			$Domain.show()
+	elif hive == 2:
+		if GAME.level2 != 0:
+			$Domain.show()
+	elif hive == 3:
+		if GAME.level3 != 0:
+			$Domain.show()
+	elif hive == 4: 
+		if GAME.level4 != 0:
+			$Domain.show()
 
 func _process(delta):
 	if Input.is_action_just_pressed("Action") and event == event_on:

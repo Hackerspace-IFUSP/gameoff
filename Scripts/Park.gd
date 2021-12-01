@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 
 enum{max_shadows,min_shadows}
 var shadows = max_shadows
@@ -10,9 +10,10 @@ onready var objects_position = top_position
 var position_index = 0
 
 func _ready():
+	$transition.play("event")
 	$Bee.global_position = GAME.player_position
 	if (GAME.level1 + GAME.level2 + GAME.level3 + GAME.level4) == 4:
-		print("ganhou")
+		get_tree().change_scene("res://Scenes/End_screen.tscn")
 	
 	
 func _process(delta):

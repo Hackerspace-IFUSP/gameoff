@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Sprites/park_graphics/Hive.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Hive.gd" type="Script" id=2]
 [ext_resource path="res://theme_res/Interact.tres" type="DynamicFont" id=3]
 [ext_resource path="res://theme_res/Hive.tres" type="Theme" id=4]
 [ext_resource path="res://Sprites/Dancers/bee.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/park_graphics/domain.png" type="Texture" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8, 8 )
@@ -296,6 +297,11 @@ text = "Return"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Domain" type="Sprite" parent="."]
+visible = false
+position = Vector2( -23, 0 )
+texture = ExtResource( 6 )
 
 [connection signal="body_entered" from="Range" to="." method="_on_Range_body_entered"]
 [connection signal="body_exited" from="Range" to="." method="_on_Range_body_exited"]
