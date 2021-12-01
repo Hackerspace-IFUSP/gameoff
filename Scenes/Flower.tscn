@@ -1,7 +1,8 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Scripts/Flower.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/park_graphics/Sprite_sheet.png" type="Texture" id=2]
+[ext_resource path="res://theme_res/Interact.tres" type="DynamicFont" id=3]
 
 [sub_resource type="Gradient" id=22]
 offsets = PoolRealArray( 0.145729, 0.994975 )
@@ -23,14 +24,6 @@ region = Rect2( 24, 0, 8, 8 )
 atlas = ExtResource( 2 )
 region = Rect2( 40, 0, 8, 8 )
 
-[sub_resource type="AtlasTexture" id=10]
-atlas = ExtResource( 2 )
-region = Rect2( 0, 8, 8, 8 )
-
-[sub_resource type="AtlasTexture" id=11]
-atlas = ExtResource( 2 )
-region = Rect2( 16, 8, 8, 8 )
-
 [sub_resource type="AtlasTexture" id=12]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 8, 8 )
@@ -47,6 +40,14 @@ region = Rect2( 48, 8, 8, 8 )
 atlas = ExtResource( 2 )
 region = Rect2( 64, 8, 8, 8 )
 
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 8, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 2 )
+region = Rect2( 16, 8, 8, 8 )
+
 [sub_resource type="SpriteFrames" id=8]
 animations = [ {
 "frames": [ SubResource( 18 ), SubResource( 19 ) ],
@@ -59,11 +60,6 @@ animations = [ {
 "name": "1",
 "speed": 1.8
 }, {
-"frames": [ SubResource( 10 ), SubResource( 11 ) ],
-"loop": true,
-"name": "3",
-"speed": 1.8
-}, {
 "frames": [ SubResource( 12 ), SubResource( 13 ) ],
 "loop": true,
 "name": "0",
@@ -73,10 +69,18 @@ animations = [ {
 "loop": true,
 "name": "4",
 "speed": 1.8
+}, {
+"frames": [ SubResource( 10 ), SubResource( 11 ) ],
+"loop": true,
+"name": "3",
+"speed": 1.8
 } ]
 
 [sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 4, 4 )
+
+[sub_resource type="Theme" id=23]
+default_font = ExtResource( 3 )
 
 [sub_resource type="Animation" id=3]
 resource_name = "Event1"
@@ -125,6 +129,23 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 0 ) ]
 }
 
+[sub_resource type="Animation" id=24]
+resource_name = "collect"
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "_collected"
+} ]
+}
+
 [node name="Flower" type="StaticBody2D"]
 script = ExtResource( 1 )
 
@@ -162,9 +183,10 @@ shape = SubResource( 9 )
 [node name="PressE" type="Label" parent="."]
 modulate = Color( 1, 1, 1, 0 )
 margin_left = -4.0
-margin_top = -16.0
-margin_right = 3.0
-margin_bottom = -2.0
+margin_top = -21.0
+margin_right = 6.0
+margin_bottom = -1.0
+theme = SubResource( 23 )
 text = "E"
 align = 1
 valign = 1
@@ -176,6 +198,7 @@ __meta__ = {
 anims/Event1 = SubResource( 3 )
 anims/Event2 = SubResource( 4 )
 anims/RESET = SubResource( 5 )
+anims/collect = SubResource( 24 )
 
 [connection signal="body_entered" from="area" to="." method="_on_area_body_entered"]
 [connection signal="body_exited" from="area" to="." method="_on_area_body_exited"]

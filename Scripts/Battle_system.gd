@@ -13,7 +13,7 @@ func _process(delta):
 		points = 100
 	elif points < 0:
 		points = 0
-	
+	$Stage.speed_scale = clamp(points/100*2.5,0.5,2.5)
 	
 	if Input.is_action_just_pressed("ui_left"):
 		points -= 5

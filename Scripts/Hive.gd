@@ -4,8 +4,11 @@ enum {event_on, event_off}
 var event = event_off
 var temp_position
 export(int, "capital", "hive1", "hive2", "hive3", "hive4") var hive
+export(Texture) var bee_Face
 
 
+func _ready():
+	$Hive_menu/Hive/Image_screen.texture = bee_Face
 
 func _process(delta):
 	if Input.is_action_just_pressed("Action") and event == event_on:
@@ -59,13 +62,15 @@ func _on_Range_body_entered(body):
 		$Anim.play("Event2")
 		temp_position = body.global_position
 		event = event_on 
+		$Sprite.material.set_shader_param("outline_width",1.0)
 
 
 func _on_Range_body_exited(body):
 	if body.is_in_group("Player"):
 		$Anim.play("Event1")
 		event = event_off
-
+		$Sprite.material.set_shader_param("outline_width",0.0)
+		
 ##Principal Buttons
 func _on_Rest_pressed():
 	GAME.player_position = temp_position

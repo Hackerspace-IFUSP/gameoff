@@ -23,12 +23,14 @@ func _ready():
 		$stop.frame = 17
 
 
-func _process(delta):
-	if Input.is_action_just_pressed("Action") and event == event_on:
+	
+func _input(key_press):
+	if key_press.is_action_pressed("Action") and event == event_on:
 		GAME.polen += int(rand_range(1,5))
 		$shaking.hide()
 		$particles.emitting = false
 		$stop.show()
+		event = event_off
 
 func _on_area_body_entered(body):
 	if body.is_in_group("Player"):
@@ -41,3 +43,4 @@ func _on_area_body_exited(body):
 	if body.is_in_group("Player"):
 		$Anim.play("Event1")
 		event = event_off
+
