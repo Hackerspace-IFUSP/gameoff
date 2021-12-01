@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Sprites/park_graphics/Sprite_sheet.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Bee.tscn" type="PackedScene" id=2]
@@ -13,7 +13,6 @@
 [ext_resource path="res://Sprites/park_graphics/home.png" type="Texture" id=11]
 [ext_resource path="res://theme_res/hud_Font.tres" type="Theme" id=12]
 [ext_resource path="res://Sprites/Dancers/otakubee.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/Dancers/kpopbee.png" type="Texture" id=14]
 [ext_resource path="res://Sprites/Dancers/puncbee.png" type="Texture" id=15]
 [ext_resource path="res://Sprites/Dancers/funckbee.png" type="Texture" id=16]
 
@@ -1090,12 +1089,11 @@ flower_color = 4
 [node name="Hive" parent="Hives" instance=ExtResource( 5 )]
 position = Vector2( 39, 72 )
 hive = 1
-bee_Face = ExtResource( 14 )
 
 [node name="Hive2" parent="Hives" instance=ExtResource( 5 )]
 position = Vector2( 142, 38 )
 hive = 3
-bee_Face = ExtResource( 16 )
+bee_Face = ExtResource( 15 )
 
 [node name="Hive3" parent="Hives" instance=ExtResource( 5 )]
 position = Vector2( 232, 88 )
@@ -1113,7 +1111,7 @@ bee_Face = ExtResource( 13 )
 [node name="Hive5" parent="Hives" instance=ExtResource( 5 )]
 position = Vector2( 88, 184 )
 hive = 2
-bee_Face = ExtResource( 15 )
+bee_Face = ExtResource( 16 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 pause_mode = 2

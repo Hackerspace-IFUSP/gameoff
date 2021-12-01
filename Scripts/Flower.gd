@@ -1,9 +1,10 @@
 extends StaticBody2D
 
 enum {event_on, event_off}
-var event = event_off
+var event = event_on
 var temp_position
 export(int,"red","white","yellow","pink","blue" ) var flower_color = 0
+var has_player = false
 
 func _ready():
 	if flower_color == 0:
@@ -25,22 +26,24 @@ func _ready():
 
 	
 func _input(key_press):
-	if key_press.is_action_pressed("Action") and event == event_on:
+	if key_press.is_action_pressed("Action") and event == event_on and has_player:
 		GAME.polen += int(rand_range(1,5))
 		$shaking.hide()
 		$particles.emitting = false
 		$stop.show()
 		event = event_off
+		$PressE.hide()
 
 func _on_area_body_entered(body):
 	if body.is_in_group("Player"):
 		$Anim.play("Event2")
 		temp_position = body.global_position
-		event = event_on 
+		has_player = true
+		#event = event_on 
 
 
 func _on_area_body_exited(body):
 	if body.is_in_group("Player"):
 		$Anim.play("Event1")
-		event = event_off
-
+		#event = event_off
+	has_player = false
