@@ -22,7 +22,7 @@ func _ready():
 		if GAME.level4 != 0:
 			$Domain.show()
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("Action") and event == event_on:
 		if hive == 0:
 			$Hive_menu/Principal.show()

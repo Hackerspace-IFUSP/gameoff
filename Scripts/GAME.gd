@@ -22,7 +22,7 @@ var level4 = 0
 func _ready():
 	pass
 
-func _process(delta):
+func _process(_delta):
 	if honey > 999:
 		honey = 999
 	

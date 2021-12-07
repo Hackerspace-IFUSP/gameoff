@@ -27,7 +27,7 @@ func _ready():
 	
 func _input(key_press):
 	if key_press.is_action_pressed("Action") and event == event_on and has_player:
-		GAME.polen += int(rand_range(1,5))
+		GAME.polen += int(rand_range(8,14))
 		$shaking.hide()
 		$particles.emitting = false
 		$stop.show()

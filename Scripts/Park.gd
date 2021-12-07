@@ -16,14 +16,14 @@ func _ready():
 		get_tree().change_scene("res://Scenes/End_screen.tscn")
 	
 	
-func _process(delta):
-	shadows()
+func _process(_delta):
+	shadows_func()
 	persons_position()
 	$"CanvasLayer/Hudbar/HoneyHud/Label".text = str(GAME.honey)
 	$"CanvasLayer/Hudbar/PolenHud/Label2".text = str(GAME.polen)
 	$"CanvasLayer/Hudbar/Bee/Label3".text = str(GAME.dancers)
 
-func shadows():
+func shadows_func():
 	if shadows == max_shadows:
 		shadow_index += 1
 		if shadow_index >= 30:

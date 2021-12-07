@@ -7,7 +7,7 @@ var beat_index = 0
 func _ready():
 	pass
 
-func _process(delta):
+func _process(_delta):
 	if beat == on_beat:
 		beat_index += 1
 		if beat_index >= 30:
@@ -24,7 +24,7 @@ func _physics_process(delta):
 	self.move(delta)
 	pass
 
-func move(delta):
+func move(_delta):
 	self.velocity.x = (Input.get_action_strength("move_right") - Input.get_action_strength("move_left")) * self.maxSpeed
 	self.velocity.y = (Input.get_action_strength("move_down") - Input.get_action_strength("move_up")) * self.maxSpeed
 
