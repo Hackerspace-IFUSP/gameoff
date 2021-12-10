@@ -3,6 +3,7 @@ extends Node2D
 
 func _ready():
 	$transition.play("event")
+	$change_scene.grab_focus()
 
 
 func _on_change_scene_pressed():

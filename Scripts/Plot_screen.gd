@@ -5,6 +5,7 @@ func _ready():
 	$transition.play("event")
 	$text_transition.play("event")
 	$music.play()
+	$change_scene.grab_focus()
 	
 
 func _on_change_scene_pressed():

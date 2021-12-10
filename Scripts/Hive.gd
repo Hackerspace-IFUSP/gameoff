@@ -26,12 +26,14 @@ func _process(_delta):
 	if Input.is_action_just_pressed("Action") and event == event_on:
 		if hive == 0:
 			$Hive_menu/Principal.show()
+			$Hive_menu/Principal/Rest.grab_focus()
 		
 		elif hive == 1:
 			$Hive_menu/Hive/Name.text = 'Hive 1'
 			$Hive_menu/Hive/Influence/Price.text = "50x Honey"
 			$Hive_menu/Hive/Chalange/Price.text = "1x Dancer"
 			$Hive_menu/Hive.show()
+			$Hive_menu/Hive/Influence.grab_focus()
 			if GAME.dancer1 != 0:
 				$Hive_menu/Hive/Influence.hide()
 			if GAME.level1 != 0:
@@ -42,6 +44,7 @@ func _process(_delta):
 			$Hive_menu/Hive/Influence/Price.text = "60x Honey"
 			$Hive_menu/Hive/Chalange/Price.text = "2x Dancer"
 			$Hive_menu/Hive.show()
+			$Hive_menu/Hive/Influence.grab_focus()
 			if GAME.dancer2 != 0:
 				$Hive_menu/Hive/Influence.hide()
 			if GAME.level2 != 0:
@@ -52,6 +55,7 @@ func _process(_delta):
 			$Hive_menu/Hive/Influence/Price.text = "70x Honey"
 			$Hive_menu/Hive/Chalange/Price.text = "3x Dancer"
 			$Hive_menu/Hive.show()
+			$Hive_menu/Hive/Influence.grab_focus()
 			if GAME.dancer3 != 0:
 				$Hive_menu/Hive/Influence.hide()
 			if GAME.level3 != 0:
@@ -62,6 +66,7 @@ func _process(_delta):
 			$Hive_menu/Hive/Influence/Price.text = "80x Honey"
 			$Hive_menu/Hive/Chalange/Price.text = "4x Dancer"
 			$Hive_menu/Hive.show()
+			$Hive_menu/Hive/Influence.grab_focus()
 			if GAME.dancer4 != 0:
 				$Hive_menu/Hive/Influence.hide()
 			if GAME.level4 != 0:
